@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "soquetic": "^1.4.2"
+  },
+  "name": "pelados-ii",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicolaswid/Pelados-II.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicolaswid/Pelados-II/issues"
+  },
+  "homepage": "https://github.com/Nicolaswid/Pelados-II#readme",
+  "description": "",
+  "type": "module"
+}
