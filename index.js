@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs, { readFileSync } from "fs";
 import { subscribeGETEvent, subscribePOSTEvent, realTimeEvent, startServer } from "soquetic";
 
 function sabores (){
@@ -7,6 +7,16 @@ function sabores (){
     console.log(sabores);
     return (sabores);
 }
+function producto (){
+    let produc_not = fs.readFileSync("data/productos.json", "utf-8");
+    let productos = JSON.parse(produc_not);
+    console.log(productos);
+    return (productos);
+}
+function pedido (data){
 
+}
 subscribeGETEvent ("sabores", sabores);
+subscribeGETEvent ("productos", producto);
+subscribePOSTEvent ("producto", pedido);
 startServer();
