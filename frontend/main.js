@@ -85,7 +85,7 @@ function enviarPedido() {
   let nombre = nombreInput.value;
   let restantes = parseInt(saboresRestantes.innerText);
   if (producto !== "" && nombre !== "" && restantes === 0) {
-    postEvent("pedido", { producto, sabores, nombre }, (response) => {
+    postEvent("producto", { producto, sabores, nombre }, (response) => {
       if (response.ok) {
         popup.querySelector(".content").textContent =
           "Pedido enviado correctamente";
