@@ -13,10 +13,11 @@ function producto (){
     console.log(productos);
     return (productos);
 }
-function pedido (data){
-
+function recibirPedido (pedido){
+    let elPedidoHecho = JSON.parse(fs.readFileSync("data/pedidos.json", "utf-8"));
+    elPedidoHecho.push(pedido);
 }
 subscribeGETEvent ("sabores", sabores);
 subscribeGETEvent ("productos", producto);
-subscribePOSTEvent ("producto", pedido);
+subscribePOSTEvent ("producto", recibirPedido);
 startServer();
